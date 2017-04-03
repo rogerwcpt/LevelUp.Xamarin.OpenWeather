@@ -10,6 +10,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using LevelUp.Xamarin.OpenWeather.Android.Helpers;
+using LevelUp.Xamarin.OpenWeather.Droid.Adapters;
+using LevelUp.Xamarin.OpenWeather.Models.Domain;
 using LevelUp.Xamarin.OpenWeather.Services;
 
 namespace LevelUp.Xamarin.OpenWeather.Droid
@@ -44,27 +46,56 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 
             // Set TemperatureText
             var textTemperature = FindViewById<TextView>(Resource.Id.textTemperature);
-            textTemperature.Text = $"{weatherData.Main.TempMax} C";
+			textTemperature.Text = weatherData.Main.Temp.ToString("F1") + " C";
 
             // Set Synopsis Text
             var textSynopsis = FindViewById<TextView>(Resource.Id.textSynopsis);
-            textSynopsis.Tag = weatherData.Weather.First().Description;
+			textSynopsis.Text = weatherData.Weather.First().Description;
 
             // Timestamp Text
             var textTimeStamp = FindViewById<TextView>(Resource.Id.textTimeStamp);
-            textTimeStamp.Text = GetDateString(weatherData.Dt);
+			textTimeStamp.Text = GetDateString(weatherData.Dt, DateTmeFormat.Time);
 
-
-
-
-
-
+			var listView = FindViewById<ListView>(Resource.Id.listDetails);
+			listView.Adapter = new KeyValueAdapter(this, BuildListItems(weatherData));
         }
 
-        private string GetDateString(int dt)
+		private enum DateTmeFormat
+		{
+			Date,
+			Time
+		}
+
+		private string GetDateString(int dt, DateTmeFormat format)
         {
-            return new DateTime(dt).ToShortDateString();
+			DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeSeconds(dt);
+			var dateTime = dateTimeOffset.ToLocalTime().DateTime;
+			if (format == DateTmeFormat.Date)
+			{
+				return dateTime.ToShortDateString();
+			}
+
+			return dateTime.ToShortTimeString();
 
         }
+
+		IList<Tuple<string, string>> BuildListItems(WeatherResponse weatherData)
+		{
+			var lineItems = new List<Tuple<string, string>>();
+
+			lineItems.Add(CreateItem("Wind", $"{weatherData.Wind.Speed} km/h "));
+			lineItems.Add(CreateItem("Cloudiness", $"{weatherData.Clouds.All} %"));
+			lineItems.Add(CreateItem("Pressure", $"{weatherData.Main.Pressure} hpa"));
+			lineItems.Add(CreateItem("Sunrise", $"{GetDateString(weatherData.Sys.Sunrise, DateTmeFormat.Date)}"));
+			lineItems.Add(CreateItem("Sunset", $"{GetDateString(weatherData.Sys.Sunset, DateTmeFormat.Date)}"));
+			lineItems.Add(CreateItem("Coords", $"{weatherData.Coord.Lon}, {weatherData.Coord.Lat}"));
+
+			return lineItems;
+		}
+
+		private Tuple<string, string> CreateItem(string item1, string item2)
+		{
+			return new Tuple<string, string>(item1, item2);
+		}
     }
 }

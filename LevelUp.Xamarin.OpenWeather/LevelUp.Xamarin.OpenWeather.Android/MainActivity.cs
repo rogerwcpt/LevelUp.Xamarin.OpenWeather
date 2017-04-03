@@ -12,7 +12,7 @@ using LevelUp.Xamarin.OpenWeather.Models.Domain;
 
 namespace LevelUp.Xamarin.OpenWeather.Droid
 {
-	[Activity (Label = "LevelUp.Xamarin.OpenWeather.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Open Weather", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         public static string EXTRA_MESSAGE = "cityname";
