@@ -32,6 +32,11 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 		{
 			var weatherData = CacheService.Instance.WeatherData;
 
+			if (weatherData == null)
+			{
+				return;
+			}
+
 			// Set City Text
 			var  textview = FindViewById<TextView>(Resource.Id.textCityTitle);
 			textview.Text = $"Weather in {weatherData.Name}, {weatherData.Sys.Country}";
