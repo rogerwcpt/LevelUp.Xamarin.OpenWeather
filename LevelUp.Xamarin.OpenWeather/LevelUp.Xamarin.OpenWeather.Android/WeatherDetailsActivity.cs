@@ -42,6 +42,29 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			var imageBitmap = BitmapHelper.GetImageBitmapFromUrl(iconURL);
 			imageView.SetImageBitmap(imageBitmap);
 
-		}
-}
+            // Set TemperatureText
+            var textTemperature = FindViewById<TextView>(Resource.Id.textTemperature);
+            textTemperature.Text = $"{weatherData.Main.TempMax} C";
+
+            // Set Synopsis Text
+            var textSynopsis = FindViewById<TextView>(Resource.Id.textSynopsis);
+            textSynopsis.Tag = weatherData.Weather.First().Description;
+
+            // Timestamp Text
+            var textTimeStamp = FindViewById<TextView>(Resource.Id.textTimeStamp);
+            textTimeStamp.Text = GetDateString(weatherData.Dt);
+
+
+
+
+
+
+        }
+
+        private string GetDateString(int dt)
+        {
+            return new DateTime(dt).ToShortDateString();
+
+        }
+    }
 }
