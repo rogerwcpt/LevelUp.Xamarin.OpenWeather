@@ -48,6 +48,10 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			{
 				response = await WeatherService.Value.GetWeather(CityEditText.Text);
 				CacheService.Instance.WeatherData = response;
+				if (response != null)
+				{
+					SavePreferences();
+				}
 			}
 			finally
 			{
@@ -56,7 +60,6 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 
 			if (response != null)
 			{
-				SavePreferences();
 				Intent intent = new Intent(this, typeof(WeatherDetailsActivity));
 				StartActivity(intent);
 			}
