@@ -12,7 +12,7 @@ using LevelUp.Xamarin.OpenWeather.Models.Domain;
 
 namespace LevelUp.Xamarin.OpenWeather.Droid
 {
-	[Activity (Label = "LevelUp.Xamarin.OpenWeather.Android", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "Open Weather", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         public static string EXTRA_MESSAGE = "cityname";
@@ -48,6 +48,10 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			{
 				response = await WeatherService.Value.GetWeather(CityEditText.Text);
 				CacheService.Instance.WeatherData = response;
+				if (response != null)
+				{
+					SavePreferences();
+				}
 			}
 			finally
 			{
@@ -56,7 +60,6 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 
 			if (response != null)
 			{
-				SavePreferences();
 				Intent intent = new Intent(this, typeof(WeatherDetailsActivity));
 				StartActivity(intent);
 			}
