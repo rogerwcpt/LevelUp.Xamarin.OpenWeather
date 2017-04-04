@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 	<uses-sdk android:minSdkVersion="16" />
-	<application android:label="Xamarin Open Weather"></application>
+	<application android:label="Xamarin Open Weather" android:theme="@android:style/Theme.Holo.Light"></application>
 </manifest>

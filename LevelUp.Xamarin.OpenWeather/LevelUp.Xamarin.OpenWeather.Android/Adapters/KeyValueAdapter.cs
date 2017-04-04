@@ -55,7 +55,7 @@ namespace LevelUp.Xamarin.OpenWeather.Droid.Adapters
 
 			if (position % 2 == 1)
 			{
-				view.SetBackgroundColor(Color.LightGray);
+				view.SetBackgroundColor(new Color(228, 228, 228));
 			}
 
 			return view;
