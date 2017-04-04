@@ -43,7 +43,7 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			var textview = FindViewById<TextView>(Resource.Id.textCityTitle);
 			textview.Text = $"Weather in {weatherData.Name}, {weatherData.Sys.Country}";
 
-		
+			// Set Temperature Text
 			var textTemperature = FindViewById<TextView>(Resource.Id.textTemperature);
 			textTemperature.Text = weatherData.Main.Temp.ToString("F1") + " C";
 
@@ -53,7 +53,7 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 
 			// Timestamp Text
 			var textTimeStamp = FindViewById<TextView>(Resource.Id.textTimeStamp);
-			textTimeStamp.Text = DateTimeHelper.GetDateString(weatherData.Dt, DateTimeHelper.DateTimeFormat.FullDate);
+			textTimeStamp.Text = DateTimeHelper.GetDateString(weatherData.Dt, DateTimeHelper.DateTimeFormat.FullDate, true);
 
 			// Populate ListView
 			var listView = FindViewById<ListView>(Resource.Id.listDetails);
@@ -73,8 +73,6 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			// Non Async version
 			//var imageBitmap = BitmapHelper.GetImageBitmapFromUrl(iconURL);
 			//imageView.SetImageBitmap(imageBitmap);
-
-			// Set TemperatureText
 
 			// Asyc Version
 			var bitmapHelper = new BitmapHelper();

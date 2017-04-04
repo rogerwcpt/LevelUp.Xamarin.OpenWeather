@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 
@@ -51,6 +52,12 @@ namespace LevelUp.Xamarin.OpenWeather.Droid.Adapters
 			}
 			view.FindViewById<TextView>(Resource.Id.Text1).Text = item.Item1;
 			view.FindViewById<TextView>(Resource.Id.Text2).Text = item.Item2;
+
+			if (position % 2 == 1)
+			{
+				view.SetBackgroundColor(Color.LightGray);
+			}
+
 			return view;
 		}
 	}

@@ -3,10 +3,18 @@ namespace LevelUp.Xamarin.OpenWeather.Helpers
 {
 	public class DateTimeHelper
 	{
-		public static string GetDateString(int unixTimeStamp, DateTimeFormat format )
+		public static string GetDateString(int unixTimeStamp, DateTimeFormat format, bool useLocalTime = false )
 		{
 			var dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
-			dateTime = dateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+			dateTime = dateTime.AddSeconds(unixTimeStamp);
+			if (useLocalTime)
+			{
+				dateTime = dateTime.ToLocalTime();
+			}
+			else
+			{
+				
+			}
 			switch (format)
 			{
 				case DateTimeFormat.Date:  
