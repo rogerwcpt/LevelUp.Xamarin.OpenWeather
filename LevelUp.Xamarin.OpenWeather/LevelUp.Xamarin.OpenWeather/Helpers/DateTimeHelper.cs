@@ -11,11 +11,8 @@ namespace LevelUp.Xamarin.OpenWeather.Helpers
 			{
 				dateTime = dateTime.ToLocalTime();
 			}
-			else
-			{
-				
-			}
-			switch (format)
+
+            switch (format)
 			{
 				case DateTimeFormat.Date:  
 					return dateTime.ToString("M");
@@ -24,7 +21,7 @@ namespace LevelUp.Xamarin.OpenWeather.Helpers
 				case DateTimeFormat.FullDate:
 					return dateTime.ToString("f");
 				default:
-					return dateTime.ToString("f");
+					return dateTime.ToString();
 					
 			}
 		}

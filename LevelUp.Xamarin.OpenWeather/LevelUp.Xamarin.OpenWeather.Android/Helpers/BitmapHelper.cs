@@ -3,7 +3,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Android.Graphics;
 
-namespace LevelUp.Xamarin.OpenWeather.Android.Helpers
+namespace LevelUp.Xamarin.OpenWeather.Droid.Helpers
 {
 	public class BitmapHelper
 	{
@@ -29,12 +29,10 @@ namespace LevelUp.Xamarin.OpenWeather.Android.Helpers
 
 			var webClient = new WebClient();
 			webClient.DownloadDataAsync(new Uri(url));
-			webClient.DownloadDataCompleted += (object sender, DownloadDataCompletedEventArgs data) => {
-				if (data != null && data.Result.Length > 0)
-				{
-					var imageBitmap = BitmapFactory.DecodeByteArray(data.Result, 0, data.Result.Length);
-					tcs.SetResult(imageBitmap);
-				}
+			webClient.DownloadDataCompleted += (sender, data) => {
+			    if (data == null || data.Result.Length <= 0) return;
+			    var imageBitmap = BitmapFactory.DecodeByteArray(data.Result, 0, data.Result.Length);
+			    tcs.SetResult(imageBitmap);
 			};
 
 			return tcs.Task;

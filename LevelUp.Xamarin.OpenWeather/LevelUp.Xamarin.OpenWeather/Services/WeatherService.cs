@@ -1,6 +1,4 @@
-﻿
-using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using LevelUp.Xamarin.OpenWeather.Models.Domain;
 using Newtonsoft.Json;
@@ -9,10 +7,10 @@ namespace LevelUp.Xamarin.OpenWeather.Services
 {
 	public class WeatherService
 	{
-		private const string baseUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
-		private const string urlQueryString = "&appid=7936b956edfc1d816ad0a23f31503930&units=metric";
+		private const string BaseUrl = "http://api.openweathermap.org/data/2.5/weather?q=";
+		private const string UrlQueryString = "&appid=7936b956edfc1d816ad0a23f31503930&units=metric";
 
-		private HttpClient _httpClient;
+		private readonly HttpClient _httpClient;
 
 		public WeatherService()
 		{
@@ -23,7 +21,7 @@ namespace LevelUp.Xamarin.OpenWeather.Services
 		{
 			WeatherResponse result = null;
 
-			var url = baseUrl + cityName + urlQueryString;
+			var url = BaseUrl + cityName + UrlQueryString;
 			var response = await _httpClient.GetAsync(url);
 			if (response.IsSuccessStatusCode)
 			{

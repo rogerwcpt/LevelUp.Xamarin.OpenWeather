@@ -1,5 +1,4 @@
-﻿using System;
-using LevelUp.Xamarin.OpenWeather.Models.Domain;
+﻿using LevelUp.Xamarin.OpenWeather.Models.Domain;
 
 namespace LevelUp.Xamarin.OpenWeather.Services
 {
@@ -9,17 +8,6 @@ namespace LevelUp.Xamarin.OpenWeather.Services
 
 		public WeatherResponse WeatherData { get; set; }
 
-		public static CacheService Instance
-		{
-			get
-			{
-				if (_cacheServiceInstance == null)
-				{
-					_cacheServiceInstance = new CacheService();
-				}
-
-				return _cacheServiceInstance;
-			}
-		}
+		public static CacheService Instance => _cacheServiceInstance ?? (_cacheServiceInstance = new CacheService());
 	}
 }
