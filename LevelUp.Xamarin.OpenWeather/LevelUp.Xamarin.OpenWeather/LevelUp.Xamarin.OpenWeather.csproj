@@ -41,6 +41,11 @@
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Platform\Services\Contracts\IProgressService.cs" />
+    <Compile Include="ViewModels\WeatherViewModel.cs" />
+    <Compile Include="Services\Contracts\IPreferenceService.cs" />
+    <Compile Include="Services\PreferenceService.cs" />
+    <Compile Include="Helpers\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -48,6 +53,9 @@
     <Folder Include="Services\" />
     <Folder Include="Mappers\" />
     <Folder Include="Helpers\" />
+    <Folder Include="Platform\" />
+    <Folder Include="Platform\Services\" />
+    <Folder Include="Platform\Services\Contracts\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -64,6 +72,12 @@
     </Reference>
     <Reference Include="MvvmCross.Localization">
       <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.2.5.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.2.5.4\lib\portable-net45+wp80+win8+wpa81\Plugin.Settings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

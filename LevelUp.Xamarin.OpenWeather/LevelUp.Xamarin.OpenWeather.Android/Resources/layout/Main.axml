@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +18,8 @@
         android:id="@+id/buttonGetWeather"
         android:layout_below="@+id/editTextCity"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        app:MvxBind="Click GoButtonCommand" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,5 +29,6 @@
         android:hint="Name of City"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        app:MvxBind="Text CityName" />
 </RelativeLayout>

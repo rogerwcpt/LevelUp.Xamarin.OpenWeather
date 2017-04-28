@@ -69,6 +69,7 @@
   <ItemGroup>
     <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
       <Name>LevelUp.Xamarin.OpenWeather</Name>
+      <Project>{7B5D3546-A570-4D8B-9240-546674ED2EC8}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
