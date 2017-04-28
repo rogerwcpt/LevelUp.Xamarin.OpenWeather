@@ -130,6 +130,9 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
 			
+			// aapt resource value: 0x7f020001
+			public const int screen = 2130837505;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -202,7 +205,10 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			public const int Main = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int WeatherDetails = 2130903042;
+			public const int SplashScreen = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int WeatherDetails = 2130903043;
 			
 			static Layout()
 			{
@@ -236,8 +242,11 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 		public partial class Style
 		{
 			
+			// aapt resource value: 0x7f080001
+			public const int AppTheme = 2131230721;
+			
 			// aapt resource value: 0x7f080000
-			public const int AppTheme = 2131230720;
+			public const int Theme_Splash = 2131230720;
 			
 			static Style()
 			{

@@ -2,8 +2,8 @@
 
 namespace LevelUp.Xamarin.OpenWeather.Services
 {
-	public class CacheService
-	{
+  public class CacheService : ICacheService
+  {
 		private static CacheService _cacheServiceInstance;
 
 		public WeatherResponse WeatherData { get; set; }
