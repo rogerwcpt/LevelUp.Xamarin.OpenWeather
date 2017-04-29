@@ -6,6 +6,7 @@ using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
 using LevelUp.Xamarin.OpenWeather.Droid.Platform.Services;
+using LevelUp.Xamarin.OpenWeather.Shared;
 
 namespace LevelUp.Xamarin.OpenWeather.Droid
 {
