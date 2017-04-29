@@ -6,7 +6,7 @@ namespace LevelUp.Xamarin.OpenWeather.Droid.Views
 {
 	[Activity(
 		Label = "Open Weather",
-	    Icon = "@drawable/icon")]
+	    Icon = "@drawable/Icon")]
 	public class MainView : BaseActivity
 	{
 		public MainView() : base(Resource.Layout.Main)

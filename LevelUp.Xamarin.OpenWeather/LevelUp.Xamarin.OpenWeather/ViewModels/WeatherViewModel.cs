@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using LevelUp.Xamarin.OpenWeather.Models.Presentation;
 using System.Collections.Generic;
 using LevelUp.Xamarin.OpenWeather.Models.Domain;
+using LevelUp.Xamarin.OpenWeather.Helpers;
 
 namespace LevelUp.Xamarin.OpenWeather.ViewModels
 {
@@ -30,7 +31,7 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 			IconUrl = $"http://openweathermap.org/img/w/{data.Weather.First().Icon}.png";
 			Temperature = data.Main.Temp.ToString("F1") + " C";
 			Synopsis = data.Weather.First().Description;
-			TimeStamp = new DateTime(data.Dt, DateTimeKind.Utc).ToString("t");
+			TimeStamp = DateTimeHelper.GetDateString(data.Dt, DateTimeHelper.DateTimeFormat.Date, true);
 
 			GetWeatherItems(data);
 
@@ -50,8 +51,8 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 			WeatherItems.Add(new WeatherItem("Wind", $"{data.Wind.Speed} km/h "));
 			WeatherItems.Add(new WeatherItem("Cloudiness", $"{data.Clouds.All} %"));
 			WeatherItems.Add(new WeatherItem("Pressure", $"{data.Main.Pressure} hpa"));
-			WeatherItems.Add(new WeatherItem("Sunrise", $"{ new DateTime(data.Sys.Sunrise, DateTimeKind.Local).ToString("M")}"));
-			WeatherItems.Add(new WeatherItem("Sunset", $"{new DateTime(data.Sys.Sunset, DateTimeKind.Local).ToString("M")}"));
+			WeatherItems.Add(new WeatherItem("Sunrise", DateTimeHelper.GetDateString(data.Sys.Sunrise, DateTimeHelper.DateTimeFormat.Time, true)));
+			WeatherItems.Add(new WeatherItem("Sunset", DateTimeHelper.GetDateString(data.Sys.Sunset, DateTimeHelper.DateTimeFormat.Time, true)));
 			WeatherItems.Add(new WeatherItem("Coords", $"{data.Coord.Lon}, {data.Coord.Lat}"));
 		}
 	}

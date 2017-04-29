@@ -1,8 +1,6 @@
 ﻿using LevelUp.Xamarin.OpenWeather.Services.Contracts;
 using MvvmCross.Core.ViewModels;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
-using System;
-using LevelUp.Xamarin.OpenWeather.Services;
 using System.Threading.Tasks;
 using LevelUp.Xamarin.OpenWeather.Enums;
 
@@ -14,7 +12,7 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 		private readonly IProgressService _progressService;
 		private readonly ICacheService _cacheService;
 		private readonly IPreferenceService _preferenceService;
-		
+
 		private string _cityName;
 
 		public MainViewModel(
@@ -41,8 +39,8 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 		public string CityName
 		{
 			get { return _cityName; }
-			set 
-			{ 
+			set
+			{
 				SetProperty(ref _cityName, value);
 				GoButtonCommand.RaiseCanExecuteChanged();
 			}
@@ -52,7 +50,7 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 
 		private async Task DoButtonCommand()
 		{
-			_progressService.Show();
+			_progressService.Show("Fetching your weather");
 			try
 			{
 				var result = await _weatherService.GetWeather(CityName);
