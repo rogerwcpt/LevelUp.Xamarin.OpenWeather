@@ -48,6 +48,7 @@
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Enums\DateTimeFormatType.cs" />
     <Compile Include="Models\Presentation\WeatherItem.cs" />
+    <Compile Include="Enums\PreferenceType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

@@ -1,9 +1,11 @@
 ﻿using System;
+using LevelUp.Xamarin.OpenWeather.Enums;
+
 namespace LevelUp.Xamarin.OpenWeather.Services.Contracts
 {
 	public interface IPreferenceService
 	{
-		void SaveValue(string key, string value);
-		string GetValue(string key);
+		void SaveValue(PreferenceType key, string value);
+		string GetValue(PreferenceType key);
 	}
 }
