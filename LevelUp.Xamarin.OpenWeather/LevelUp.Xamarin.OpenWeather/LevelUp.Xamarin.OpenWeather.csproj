@@ -46,6 +46,8 @@
     <Compile Include="Services\Contracts\IPreferenceService.cs" />
     <Compile Include="Services\PreferenceService.cs" />
     <Compile Include="Helpers\Settings.cs" />
+    <Compile Include="Enums\DateTimeFormatType.cs" />
+    <Compile Include="Models\Presentation\WeatherItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -56,6 +58,8 @@
     <Folder Include="Platform\" />
     <Folder Include="Platform\Services\" />
     <Folder Include="Platform\Services\Contracts\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Models\Presentation\" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

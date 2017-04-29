@@ -83,6 +83,15 @@
       <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android.Export" />
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\packages\System.Collections.Immutable.1.2.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.DownloadCache.Droid">
+      <HintPath>..\..\packages\MvvmCross.Plugin.DownloadCache.4.4.0\lib\MonoAndroid\MvvmCross.Plugins.DownloadCache.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
@@ -102,6 +111,7 @@
     <Compile Include="Views\Common\BaseActivity.cs" />
     <Compile Include="Platform\Services\ProgressService.cs" />
     <Compile Include="Views\WeatherView.cs" />
+    <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -122,6 +132,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\screen.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\screen.png" />
     <AndroidResource Include="Resources\layout\SplashScreen.axml" />
+    <AndroidResource Include="Resources\drawable\screen.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

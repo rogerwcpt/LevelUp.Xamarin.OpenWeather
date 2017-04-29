@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:id="@+id/textCityTitle"
         android:textSize="24sp"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        app:MvxBind="Text CityTitle" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <ImageView
+        <Mvx.MvxImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/weatherIcon" />
+            android:id="@+id/weatherIcon"
+            app:MvxBind="ImageUrl IconUrl" />
         <TextView
-            android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:id="@+id/textTemperature"
             android:textSize="24sp"
-            android:textStyle="normal|bold" />
+            android:textStyle="normal|bold"
+            app:MvxBind="Text Temperature" />
     </LinearLayout>
     <TextView
-        android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:id="@+id/textSynopsis"
         android:textSize="16sp"
-        android:textStyle="normal" />
+        android:textStyle="normal"
+        app:MvxBind="Text Synopsis" />
     <TextView
         android:text="TextView"
         android:layout_width="match_parent"
@@ -43,10 +45,13 @@
         android:layout_margin="10dp"
         android:id="@+id/textTimeStamp"
         android:textSize="16sp"
-        android:textStyle="normal" />
-    <ListView
+        android:textStyle="normal"
+        app:MvxBind="Text TimeStamp" />
+    <Mvx.MvxListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:id="@+id/listDetails" />
+        android:id="@+id/listDetails"
+        app:MvxBind="ItemsSource WeatherItems"
+        app:MvxItemTemplate="@layout/listview_item_row" />
 </LinearLayout>
