@@ -14,10 +14,10 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views.Cells
 		{
 			this.DelayBind(() => { 
 				var set = this.CreateBindingSet<WeatherItemCell, WeatherItem>();
-				set.Bind(KeyLabel)
+				set.Bind(KeyLabel1)
 				   .For(x => x.Text)
 				   .To(x => x.Title);
-				set.Bind(ValueLabel)
+				set.Bind(ValueLabel1)
 				   .For(x => x.Text)
 				   .To(x => x.Value);
 				set.Apply();

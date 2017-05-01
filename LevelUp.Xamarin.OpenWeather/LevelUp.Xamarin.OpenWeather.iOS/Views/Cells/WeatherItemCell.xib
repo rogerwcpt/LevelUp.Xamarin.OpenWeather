@@ -34,8 +34,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="KeyLabel" destination="2" id="name-outlet-2"/>
-                <outlet property="ValueLabel" destination="7" id="name-outlet-7"/>
+                <outlet property="KeyLabel1" destination="2" id="name-outlet-2"/>
+                <outlet property="ValueLabel1" destination="7" id="name-outlet-7"/>
             </connections>
         </tableViewCell>
     </objects>

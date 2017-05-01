@@ -15,22 +15,22 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views.Cells
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel KeyLabel { get; set; }
+        UIKit.UILabel KeyLabel1 { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel ValueLabel { get; set; }
+        UIKit.UILabel ValueLabel1 { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (KeyLabel != null) {
-                KeyLabel.Dispose ();
-                KeyLabel = null;
+            if (KeyLabel1 != null) {
+                KeyLabel1.Dispose ();
+                KeyLabel1 = null;
             }
 
-            if (ValueLabel != null) {
-                ValueLabel.Dispose ();
-                ValueLabel = null;
+            if (ValueLabel1 != null) {
+                ValueLabel1.Dispose ();
+                ValueLabel1 = null;
             }
         }
     }
