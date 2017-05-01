@@ -108,6 +108,7 @@
     <Reference Include="MvvmCross.Plugins.File.iOS">
       <HintPath>..\..\packages\MvvmCross.Plugin.File.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
@@ -176,6 +177,7 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Views\MainView.xib" />
+    <InterfaceDefinition Include="Views\WeatherView.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -198,11 +200,17 @@
     <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
+    <Compile Include="Views\WeatherView.cs" />
+    <Compile Include="Views\WeatherView.designer.cs">
+      <DependentUpon>WeatherView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Common\BaseViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Platform\" />
     <Folder Include="Platform\Services\" />
+    <Folder Include="Views\Common\" />
   </ItemGroup>
   <Import Project="..\..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems" Label="Shared" Condition="Exists('..\..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

@@ -1,21 +1,22 @@
-﻿using System;
-using MvvmCross.Binding.BindingContext;
+﻿using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
-using UIKit;
+
 using LevelUp.Xamarin.OpenWeather.ViewModels;
+using LevelUp.Xamarin.OpenWeather.iOS.Views.Common;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 {
-	public partial class MainView : MvxViewController
+	public partial class MainView : BaseViewController
 	{
 		public MainView() : base("MainView", null)
 		{
 		}
 
-
 		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
+
+			Title = "Open Weather";
 
 			var set = this.CreateBindingSet<MainView, MainViewModel>();
 			set.Bind(CityName).To(vm => vm.CityName);
@@ -23,11 +24,20 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 			set.Apply();
 		}
 
-		public override void DidReceiveMemoryWarning()
+		public override void ViewWillAppear(bool animated)
 		{
-			base.DidReceiveMemoryWarning();
-			// Release any cached data, images, etc that aren't in use.
+			base.ViewWillAppear(animated);
+
+			Title = "Open Weather";
 		}
+	
+
+		//public override void InitializeView()
+		//{
+		//	IsNavigationBarVisible = false;
+
+		//	base.InitializeView();
+		//}
 	}
 }
 
