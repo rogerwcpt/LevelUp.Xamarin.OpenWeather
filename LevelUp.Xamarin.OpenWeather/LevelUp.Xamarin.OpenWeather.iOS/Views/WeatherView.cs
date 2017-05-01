@@ -7,6 +7,7 @@ using MvvmCross.Binding.BindingContext;
 using Foundation;
 using System.Threading.Tasks;
 using System.Net.Http;
+using LevelUp.Xamarin.OpenWeather.iOS.Views.TableViewSources;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 {
@@ -37,6 +38,7 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 			{
 				IconImage.Image = await LoadImage(viewModel.IconUrl);
 			}
+
 		}
 
 		public override void ViewDidLoad()
@@ -44,19 +46,22 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 			base.ViewDidLoad();
 
 			NavigationController.NavigationBar.TopItem.Title = "Back";
+
+
+			var source = new WeatherTableViewSource(WeatherTableView);
+			this.CreateBinding(source)
+			    .For(s => s.ItemsSource)
+			    .To<WeatherViewModel>(vm => vm.WeatherItems)
+			    .Apply();
+			WeatherTableView.Source = source;
+			WeatherTableView.ReloadData();
 		}
 
 		public async Task<UIImage> LoadImage(string imageUrl)
 		{
 			var httpClient = new HttpClient();
-
-			Task<byte[]> contentsTask = httpClient.GetByteArrayAsync(imageUrl);
-
-			// await! control returns to the caller and the task continues to run on another thread
-			var contents = await contentsTask;
-
-			// load from bytes
-			return UIImage.LoadFromData(NSData.FromArray(contents));
+			var buffer = await httpClient.GetByteArrayAsync(imageUrl);
+			return UIImage.LoadFromData(NSData.FromArray(buffer));
 		}
 
 		public override void DidReceiveMemoryWarning()

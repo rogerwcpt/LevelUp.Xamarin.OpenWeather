@@ -34,6 +34,10 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel TemperatureLabel { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView WeatherTableView { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (CityNameLabel != null) {
@@ -59,6 +63,11 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
             if (TemperatureLabel != null) {
                 TemperatureLabel.Dispose ();
                 TemperatureLabel = null;
+            }
+
+            if (WeatherTableView != null) {
+                WeatherTableView.Dispose ();
+                WeatherTableView = null;
             }
         }
     }
