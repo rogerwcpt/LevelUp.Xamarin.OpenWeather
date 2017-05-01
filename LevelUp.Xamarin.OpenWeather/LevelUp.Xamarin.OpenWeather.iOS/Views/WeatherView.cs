@@ -63,12 +63,6 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 			var buffer = await httpClient.GetByteArrayAsync(imageUrl);
 			return UIImage.LoadFromData(NSData.FromArray(buffer));
 		}
-
-		public override void DidReceiveMemoryWarning()
-		{
-			base.DidReceiveMemoryWarning();
-			// Release any cached data, images, etc that aren't in use.
-		}
 	}
 }
 
