@@ -31,6 +31,7 @@
                     <constraint id="5" firstItem="2" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="11"/>
                     <constraint id="8" firstItem="7" firstAttribute="leading" secondItem="2" secondAttribute="trailing" constant="15"/>
                     <constraint id="9" firstItem="YTl-1W-gDM" firstAttribute="trailing" secondItem="7" secondAttribute="trailing" constant="107"/>
+                    <constraint id="12" firstItem="7" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="11"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

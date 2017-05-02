@@ -109,6 +109,12 @@
       <HintPath>..\..\packages\MvvmCross.Plugin.File.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.File.iOS.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="MBProgressHUD">
+      <HintPath>..\..\packages\mbprogresshud.0.9.2.0\lib\Xamarin.iOS\MBProgressHUD.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Plugins.Messenger">
+      <HintPath>..\..\packages\MvvmCross.Plugin.Messenger.4.4.0\lib\Xamarin.iOS10\MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
@@ -211,6 +217,9 @@
       <DependentUpon>WeatherItemCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TableViewSources\WeatherTableViewSource.cs" />
+    <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
+    <Compile Include="Models\Messages\CurrentViewMessage.cs" />
+    <Compile Include="Platform\CustomPresenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
@@ -219,6 +228,9 @@
     <Folder Include="Views\Common\" />
     <Folder Include="Views\Cells\" />
     <Folder Include="Views\TableViewSources\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Messages\" />
+    <Folder Include="Views\Presenters\" />
   </ItemGroup>
   <Import Project="..\..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems" Label="Shared" Condition="Exists('..\..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
