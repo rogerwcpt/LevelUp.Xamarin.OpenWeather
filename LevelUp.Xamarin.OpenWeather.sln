@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather", "LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj", "{7B5D3546-A570-4D8B-9240-546674ED2EC8}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LevelUp.Xamarin.OpenWeather.Shared", "LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.shproj", "{497A42F1-C1AC-4885-93A3-74F05AD26D52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

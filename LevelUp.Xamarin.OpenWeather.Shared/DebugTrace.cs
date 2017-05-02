@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace LevelUp.Xamarin.OpenWeather.Droid
+namespace LevelUp.Xamarin.OpenWeather.Shared
 {
 public class DebugTrace : IMvxTrace
 {

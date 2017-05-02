@@ -3,7 +3,7 @@ namespace LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts
 {
 	public interface IProgressService
 	{
-		void Show(string message = null);
+		void Show(string text = null);
 		void Hide();
 	}
 }
