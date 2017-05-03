@@ -121,7 +121,6 @@
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Helpers\BitmapHelper.cs" />
     <Compile Include="Adapters\KeyValueAdapter.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Setup.cs" />
@@ -130,7 +129,6 @@
     <Compile Include="Platform\Services\ProgressService.cs" />
     <Compile Include="Views\WeatherView.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
-    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Bootstrap\ColorPluginBootstrap.cs" />
     <Compile Include="Converters\AlernatingRowColorValueConverter.cs" />
@@ -166,7 +164,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Adapters\" />
     <Folder Include="Views\" />
     <Folder Include="Views\Common\" />

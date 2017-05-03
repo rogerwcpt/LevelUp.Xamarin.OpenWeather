@@ -1,8 +1,5 @@
 ﻿using System;
-
-using Foundation;
 using MvvmCross.Binding.iOS.Views;
-using UIKit;
 using MvvmCross.Binding.BindingContext;
 using LevelUp.Xamarin.OpenWeather.Models.Presentation;
 
@@ -12,7 +9,8 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views.Cells
 	{
 		protected WeatherItemCell(IntPtr handle) : base(handle)
 		{
-			this.DelayBind(() => { 
+			this.DelayBind(() =>
+			{
 				var set = this.CreateBindingSet<WeatherItemCell, WeatherItem>();
 				set.Bind(KeyLabel1)
 				   .For(x => x.Text)

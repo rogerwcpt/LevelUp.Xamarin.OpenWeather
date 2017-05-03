@@ -1,6 +1,4 @@
-﻿using System;
-using MvvmCross.iOS.Views;
-using UIKit;
+﻿using UIKit;
 using LevelUp.Xamarin.OpenWeather.iOS.Views.Common;
 using LevelUp.Xamarin.OpenWeather.ViewModels;
 using MvvmCross.Binding.BindingContext;
@@ -50,9 +48,9 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 
 			var source = new WeatherTableViewSource(WeatherTableView);
 			this.CreateBinding(source)
-			    .For(s => s.ItemsSource)
-			    .To<WeatherViewModel>(vm => vm.WeatherItems)
-			    .Apply();
+				.For(s => s.ItemsSource)
+				.To<WeatherViewModel>(vm => vm.WeatherItems)
+				.Apply();
 			WeatherTableView.Source = source;
 			WeatherTableView.ReloadData();
 		}

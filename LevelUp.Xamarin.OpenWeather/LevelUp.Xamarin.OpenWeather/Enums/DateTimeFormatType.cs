@@ -1,5 +1,4 @@
-﻿using System;
-namespace LevelUp.Xamarin.OpenWeather.Enums
+﻿namespace LevelUp.Xamarin.OpenWeather.Enums
 {
 	public enum DateTimeFormatType
 	{

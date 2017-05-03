@@ -37,7 +37,6 @@
     <Compile Include="Services\Contracts\ICacheService.cs" />
     <Compile Include="Services\Contracts\IWeatherService.cs" />
     <Compile Include="Services\WeatherService.cs" />
-    <Compile Include="Mappers\DomainMapper.cs" />
     <Compile Include="Helpers\DateTimeHelper.cs" />
     <Compile Include="App.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -45,7 +44,6 @@
     <Compile Include="ViewModels\WeatherViewModel.cs" />
     <Compile Include="Services\Contracts\IPreferenceService.cs" />
     <Compile Include="Services\PreferenceService.cs" />
-    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Enums\DateTimeFormatType.cs" />
     <Compile Include="Models\Presentation\WeatherItem.cs" />
     <Compile Include="Enums\PreferenceType.cs" />
@@ -54,7 +52,6 @@
     <Folder Include="Models\" />
     <Folder Include="Models\Domain\" />
     <Folder Include="Services\" />
-    <Folder Include="Mappers\" />
     <Folder Include="Helpers\" />
     <Folder Include="Platform\" />
     <Folder Include="Platform\Services\" />

@@ -1,5 +1,4 @@
-﻿using System;
-using MvvmCross.Plugins.Messenger;
+﻿using MvvmCross.Plugins.Messenger;
 using UIKit;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS.Models.Messages

@@ -199,7 +199,6 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Platform\Services\ProgressService.cs" />
-    <Compile Include="Helpers\Settings.cs" />
     <Compile Include="Bootstrap\DownloadCachePluginBootstrap.cs" />
     <Compile Include="Bootstrap\FilePluginBootstrap.cs" />
     <Compile Include="Views\WeatherView.cs" />

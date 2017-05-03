@@ -1,5 +1,5 @@
-﻿using LevelUp.Xamarin.OpenWeather.Services.Contracts;
-using Plugin.Settings;
+﻿using Plugin.Settings;
+using LevelUp.Xamarin.OpenWeather.Services.Contracts;
 
 using LevelUp.Xamarin.OpenWeather.Enums;
 
