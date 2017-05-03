@@ -11,5 +11,7 @@ namespace LevelUp.Xamarin.OpenWeather.Models.Presentation
 
 		public string Title { get; }
 		public string Value { get; }
+
+		public bool OddColor { get; set;}
 	}
 }

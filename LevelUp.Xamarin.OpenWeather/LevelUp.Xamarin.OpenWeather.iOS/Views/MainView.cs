@@ -30,14 +30,6 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views
 
 			Title = "Open Weather";
 		}
-	
-
-		//public override void InitializeView()
-		//{
-		//	IsNavigationBarVisible = false;
-
-		//	base.InitializeView();
-		//}
 	}
 }
 
