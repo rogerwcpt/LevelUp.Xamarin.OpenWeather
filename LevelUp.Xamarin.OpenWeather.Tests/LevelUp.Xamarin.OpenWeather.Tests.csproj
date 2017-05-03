@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>LevelUp.Xamarin.OpenWeather.Tests</RootNamespace>
+    <AssemblyName>LevelUp.Xamarin.OpenWeather.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="MvvmCross.Platform">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Platform.Wpf">
+      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Test.Core">
+      <HintPath>..\packages\MvvmCross.Tests.4.4.0\lib\net45\MvvmCross.Test.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Core">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmCross.Wpf">
+      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Test.cs" />
+    <Compile Include="Fakes\Services\FakePreferenceService.cs" />
+    <Compile Include="Fakes\Common\TestContainer.cs" />
+    <Compile Include="Fakes\Common\FakeBase.cs" />
+    <Compile Include="ViewModels\MainViewModelTests.cs" />
+    <Compile Include="Helpers\DateTimeHelperTests.cs" />
+    <Compile Include="Fakes\Services\FakeProgressService.cs" />
+    <Compile Include="Fakes\Services\FakeCacheService.cs" />
+    <Compile Include="Fakes\Services\FakeWeatherService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
+      <Project>{7B5D3546-A570-4D8B-9240-546674ED2EC8}</Project>
+      <Name>LevelUp.Xamarin.OpenWeather</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fakes\" />
+    <Folder Include="Fakes\Services\" />
+    <Folder Include="Fakes\Common\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
