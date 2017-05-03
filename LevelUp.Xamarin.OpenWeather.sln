@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LevelUp.Xamarin.OpenWeather.Shared", "LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.shproj", "{497A42F1-C1AC-4885-93A3-74F05AD26D52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather.Tests", "LevelUp.Xamarin.OpenWeather.Tests\LevelUp.Xamarin.OpenWeather.Tests.csproj", "{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,18 @@ Global
 		{7B5D3546-A570-4D8B-9240-546674ED2EC8}.Release|iPhone.Build.0 = Release|Any CPU
 		{7B5D3546-A570-4D8B-9240-546674ED2EC8}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{7B5D3546-A570-4D8B-9240-546674ED2EC8}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Release|iPhone.Build.0 = Release|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{C0BA3487-4302-4F8A-8E6F-4D21F35F5EC4}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
