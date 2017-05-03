@@ -181,7 +181,6 @@
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
-    <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="Views\MainView.xib" />
     <InterfaceDefinition Include="Views\WeatherView.xib" />
     <InterfaceDefinition Include="Views\Cells\WeatherItemCell.xib" />
@@ -194,10 +193,6 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setup.cs" />
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\MainView.designer.cs">
