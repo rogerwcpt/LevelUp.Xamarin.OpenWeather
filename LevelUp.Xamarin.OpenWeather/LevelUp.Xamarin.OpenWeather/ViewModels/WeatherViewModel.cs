@@ -8,6 +8,8 @@ using LevelUp.Xamarin.OpenWeather.Models.Presentation;
 using System.Collections.Generic;
 using LevelUp.Xamarin.OpenWeather.Models.Domain;
 using LevelUp.Xamarin.OpenWeather.Helpers;
+using MvvmCross.Platform.UI;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace LevelUp.Xamarin.OpenWeather.ViewModels
 {
@@ -33,6 +35,8 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 			Synopsis = data.Weather.First().Description;
 			TimeStamp = DateTimeHelper.GetDateString(data.Dt, DateTimeHelper.DateTimeFormat.Date, true);
 
+			PanelColor = GetColorFromTemperature(data.Main.Temp);
+
 			GetWeatherItems(data);
 
 		}
@@ -42,6 +46,8 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 		public string Temperature { get; private set; }
 		public string Synopsis { get; private set; }
 		public string TimeStamp { get; private set; }
+
+		public MvxColor PanelColor { get; set; }
 
 		public List<WeatherItem> WeatherItems { get; private set; }
 
@@ -54,6 +60,30 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 			WeatherItems.Add(new WeatherItem("Sunrise", DateTimeHelper.GetDateString(data.Sys.Sunrise, DateTimeHelper.DateTimeFormat.Time, true)));
 			WeatherItems.Add(new WeatherItem("Sunset", DateTimeHelper.GetDateString(data.Sys.Sunset, DateTimeHelper.DateTimeFormat.Time, true)));
 			WeatherItems.Add(new WeatherItem("Coords", $"{data.Coord.Lon}, {data.Coord.Lat}"));
+
+			for (var i = 0; i < WeatherItems.Count; i++)
+			{
+				var isOdd = !(i % 2 == 0);
+					WeatherItems[i].OddColor = isOdd;
+			}
+		}
+
+		MvxColor GetColorFromTemperature(double temp)
+		{
+			if (temp > 40)
+				return new MvxColor(255, 17, 0, 50);
+			if (temp > 30)
+				return new MvxColor(255, 106, 0, 50);
+			if (temp > 20)
+				return new MvxColor(255, 172, 0, 50);
+			if (temp > 10)
+				return new MvxColor(49, 255, 0, 50);;
+			if (temp > 0)
+				return new MvxColor(0, 175, 255, 50);
+			if (temp < 0)
+				return new MvxColor(80, 22, 255, 50);
+
+			return new MvxColor(0, 0, 0);
 		}
 	}
 }
