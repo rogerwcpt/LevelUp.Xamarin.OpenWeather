@@ -226,6 +226,6 @@
     <Folder Include="Models\Messages\" />
     <Folder Include="Views\Presenters\" />
   </ItemGroup>
-  <Import Project="..\..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems" Label="Shared" Condition="Exists('..\..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems')" />
+  <Import Project="..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems" Label="Shared" Condition="Exists('..\LevelUp.Xamarin.OpenWeather.Shared\LevelUp.Xamarin.OpenWeather.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
