@@ -62,7 +62,6 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 				{
 					_cacheService.WeatherData = result;
 					_preferenceService.SaveValue(PreferenceType.CityName, CityName);
-					//ShowViewModel<WeatherViewModel>();
                     await _navigationService.Navigate<WeatherViewModel>();
 				}
 			}

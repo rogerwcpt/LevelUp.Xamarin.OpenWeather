@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using LevelUp.Xamarin.OpenWeather.iOS.Platform;
 using LevelUp.Xamarin.OpenWeather.iOS.Platform.Services;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
@@ -46,6 +47,14 @@ namespace LevelUp.Xamarin.OpenWeather.iOS
 
 			Mvx.LazyConstructAndRegisterSingleton<IProgressService, ProgressService>();
 		}
+
+        protected override void InitializeLastChance()
+        {
+            base.InitializeLastChance();
+
+            var ps = Mvx.Resolve<IProgressService>();
+            Debug.WriteLine(ps);
+        }
 
 		protected override IMvxTrace CreateDebugTrace()
 		{

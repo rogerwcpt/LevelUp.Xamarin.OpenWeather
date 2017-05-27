@@ -14,27 +14,26 @@ namespace LevelUp.Xamarin.OpenWeather.Tests.ViewModels
 	public class MainViewModelTests
 	{
 		private FakeCacheService _fakeCacheService;
+		private FakeWeatherService _fakeWeatherService;
+		private FakePreferenceService _fakePreferenceService;
+		private FakeProgressService _fakeProgressService;
+        private FakeNavigationService _fakeNavigationService;
 
-		FakeWeatherService _fakeWeatherService;
-
-		FakePreferenceService _fakePreferenceService;
-
-		FakeProgressService _fakeProgressService;
-
-		[SetUp]
+        [SetUp]
 		public void Init()
 		{
 			_fakeCacheService = new FakeCacheService();
 			_fakeWeatherService = new FakeWeatherService();
 			_fakePreferenceService = new FakePreferenceService();
 			_fakeProgressService = new FakeProgressService();
+            _fakeNavigationService = new FakeNavigationService();
 		}
 
 		[Test]
 		public async Task Test_GoButtonCommand_GivenEmptyCityName_ShouldNotInvoke_Services()
 		{
 			// Arrange
-			var viewModel = new MainViewModel(_fakeWeatherService, _fakeProgressService, _fakeCacheService, _fakePreferenceService);
+			var viewModel = new MainViewModel(_fakeNavigationService, _fakeWeatherService, _fakeProgressService, _fakeCacheService, _fakePreferenceService);
 			viewModel.CityName = null;
 
 			// Act
@@ -48,7 +47,7 @@ namespace LevelUp.Xamarin.OpenWeather.Tests.ViewModels
 		public async Task Test_GoButtonCommand_GivenCityName_ShouldInvoke_Services()
 		{
 			// Arrange
-			var viewModel = new MainViewModel(_fakeWeatherService, _fakeProgressService, _fakeCacheService, _fakePreferenceService);
+			var viewModel = new MainViewModel(_fakeNavigationService, _fakeWeatherService, _fakeProgressService, _fakeCacheService, _fakePreferenceService);
 			viewModel.CityName = "Cape Town";
 
 			// Act
