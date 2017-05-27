@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:MvxBind="BackgroundColor PanelColor, Converter=NativeColor">
-    <!--        <Mvx.MvxImageView
+    <!-- <Mvx.MvxImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/weatherIcon"
