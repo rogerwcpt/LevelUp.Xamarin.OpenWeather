@@ -3,6 +3,7 @@ using MvvmCross.Core.ViewModels;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
 using System.Threading.Tasks;
 using LevelUp.Xamarin.OpenWeather.Enums;
+using MvvmCross.Core.Navigation;
 
 namespace LevelUp.Xamarin.OpenWeather.ViewModels
 {
@@ -14,14 +15,17 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 		private readonly IPreferenceService _preferenceService;
 
 		private string _cityName;
+        private readonly IMvxNavigationService _navigationService;
 
-		public MainViewModel(
+        public MainViewModel(
+            IMvxNavigationService navigationService,
 			IWeatherService weatherService,
 			IProgressService progressService,
 			ICacheService cacheService,
 			IPreferenceService preferenceService)
 		{
-			_preferenceService = preferenceService;
+            this._navigationService = navigationService;
+            _preferenceService = preferenceService;
 			_cacheService = cacheService;
 			_progressService = progressService;
 			_weatherService = weatherService;
@@ -58,7 +62,8 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 				{
 					_cacheService.WeatherData = result;
 					_preferenceService.SaveValue(PreferenceType.CityName, CityName);
-					ShowViewModel<WeatherViewModel>();
+					//ShowViewModel<WeatherViewModel>();
+                    await _navigationService.Navigate<WeatherViewModel>();
 				}
 			}
 			finally

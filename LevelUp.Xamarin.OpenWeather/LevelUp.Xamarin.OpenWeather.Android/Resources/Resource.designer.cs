@@ -167,23 +167,20 @@ namespace LevelUp.Xamarin.OpenWeather.Droid
 			// aapt resource value: 0x7f040006
 			public const int editTextCity = 2130968582;
 			
-			// aapt resource value: 0x7f04000c
-			public const int listDetails = 2130968588;
+			// aapt resource value: 0x7f04000b
+			public const int listDetails = 2130968587;
 			
 			// aapt resource value: 0x7f040007
 			public const int textCityTitle = 2130968583;
 			
-			// aapt resource value: 0x7f04000a
-			public const int textSynopsis = 2130968586;
-			
 			// aapt resource value: 0x7f040009
-			public const int textTemperature = 2130968585;
-			
-			// aapt resource value: 0x7f04000b
-			public const int textTimeStamp = 2130968587;
+			public const int textSynopsis = 2130968585;
 			
 			// aapt resource value: 0x7f040008
-			public const int weatherIcon = 2130968584;
+			public const int textTemperature = 2130968584;
+			
+			// aapt resource value: 0x7f04000a
+			public const int textTimeStamp = 2130968586;
 			
 			static Id()
 			{

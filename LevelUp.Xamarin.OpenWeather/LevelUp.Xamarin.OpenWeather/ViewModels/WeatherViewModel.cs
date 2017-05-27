@@ -10,16 +10,19 @@ using LevelUp.Xamarin.OpenWeather.Models.Domain;
 using LevelUp.Xamarin.OpenWeather.Helpers;
 using MvvmCross.Platform.UI;
 using System.Runtime.InteropServices.WindowsRuntime;
+using MvvmCross.Core.Navigation;
 
 namespace LevelUp.Xamarin.OpenWeather.ViewModels
 {
 	public class WeatherViewModel : MvxViewModel
 	{
 		private readonly ICacheService _cacheService;
+        readonly IMvxNavigationService _navigationService;
 
-		public WeatherViewModel(ICacheService cacheService)
+        public WeatherViewModel(ICacheService cacheService, IMvxNavigationService navigationService)
 		{
-			_cacheService = cacheService;
+            this._navigationService = navigationService;
+            _cacheService = cacheService;
 			WeatherItems = new List<WeatherItem>();
 		}
 
