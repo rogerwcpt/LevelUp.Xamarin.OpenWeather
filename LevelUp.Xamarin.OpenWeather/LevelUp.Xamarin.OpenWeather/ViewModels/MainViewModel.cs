@@ -1,7 +1,7 @@
-﻿using LevelUp.Xamarin.OpenWeather.Services.Contracts;
+﻿using System.Threading.Tasks;
 using MvvmCross.Core.ViewModels;
+using LevelUp.Xamarin.OpenWeather.Services.Contracts;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
-using System.Threading.Tasks;
 using LevelUp.Xamarin.OpenWeather.Enums;
 using MvvmCross.Core.Navigation;
 

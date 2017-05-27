@@ -1,11 +1,9 @@
-﻿using MvvmCross.Core.ViewModels;
-using LevelUp.Xamarin.OpenWeather.Services.Contracts;
 using System.Linq;
-using LevelUp.Xamarin.OpenWeather.Enums;
-using System;
-using System.Runtime.InteropServices;
-using LevelUp.Xamarin.OpenWeather.Models.Presentation;
 using System.Collections.Generic;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform.UI;
+using LevelUp.Xamarin.OpenWeather.Services.Contracts;
+using LevelUp.Xamarin.OpenWeather.Models.Presentation;
 using LevelUp.Xamarin.OpenWeather.Models.Domain;
 using LevelUp.Xamarin.OpenWeather.Helpers;
 using MvvmCross.Platform.UI;
@@ -67,24 +65,18 @@ namespace LevelUp.Xamarin.OpenWeather.ViewModels
 			for (var i = 0; i < WeatherItems.Count; i++)
 			{
 				var isOdd = !(i % 2 == 0);
-					WeatherItems[i].OddColor = isOdd;
+				WeatherItems[i].OddColor = isOdd;
 			}
 		}
 
 		MvxColor GetColorFromTemperature(double temp)
 		{
-			if (temp > 40)
-				return new MvxColor(255, 17, 0, 50);
-			if (temp > 30)
-				return new MvxColor(255, 106, 0, 50);
-			if (temp > 20)
-				return new MvxColor(255, 172, 0, 50);
-			if (temp > 10)
-				return new MvxColor(49, 255, 0, 50);;
-			if (temp > 0)
-				return new MvxColor(0, 175, 255, 50);
-			if (temp < 0)
-				return new MvxColor(80, 22, 255, 50);
+			if (temp > 40) return new MvxColor(255, 17, 0, 50);
+			if (temp > 30) return new MvxColor(255, 106, 0, 50);
+			if (temp > 20) return new MvxColor(255, 172, 0, 50);
+			if (temp > 10) return new MvxColor(49, 255, 0, 50); ;
+			if (temp > 0) return new MvxColor(0, 175, 255, 50);
+			if (temp < 0) return new MvxColor(80, 22, 255, 50);
 
 			return new MvxColor(0, 0, 0);
 		}

@@ -1,5 +1,4 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
 using MvvmCross.Platform;
 using MvvmCross.Platform.Droid.Platform;

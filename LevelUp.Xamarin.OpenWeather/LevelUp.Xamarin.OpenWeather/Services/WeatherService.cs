@@ -1,8 +1,8 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using LevelUp.Xamarin.OpenWeather.Models.Domain;
 using LevelUp.Xamarin.OpenWeather.Services.Contracts;
-using Newtonsoft.Json;
 
 namespace LevelUp.Xamarin.OpenWeather.Services
 {

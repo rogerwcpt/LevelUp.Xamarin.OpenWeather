@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
-using UIKit;
+﻿using UIKit;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS
 {
 	public class Application
 	{
-		static void Main (string[] args)
+		static void Main(string[] args)
 		{
-			UIApplication.Main (args, null, "AppDelegate");
+			UIApplication.Main(args, null, "AppDelegate");
 		}
 	}
 }

@@ -27,22 +27,22 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="MvvmCross.Platform">
-      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platform.Wpf">
-      <HintPath>..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.Wpf.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.4.4.0\lib\net45\MvvmCross.Platform.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Test.Core">
-      <HintPath>..\packages\MvvmCross.Tests.4.4.0\lib\net45\MvvmCross.Test.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Tests.4.4.0\lib\net45\MvvmCross.Test.Core.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+      <HintPath>..\..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Core">
-      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Core.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Wpf">
-      <HintPath>..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Wpf.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.4.4.0\lib\net45\MvvmCross.Wpf.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -60,17 +60,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
-      <Project>{7B5D3546-A570-4D8B-9240-546674ED2EC8}</Project>
-      <Name>LevelUp.Xamarin.OpenWeather</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Fakes\" />
     <Folder Include="Fakes\Services\" />
     <Folder Include="Fakes\Common\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Helpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.csproj">
+      <Project>{7B5D3546-A570-4D8B-9240-546674ED2EC8}</Project>
+      <Name>LevelUp.Xamarin.OpenWeather</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
