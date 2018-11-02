@@ -5,19 +5,10 @@ Please use your own API key.
 
 ## The project dependancies:
 
-MvvMCross https://github.com/MvvmCross/MvvmCross \
-For the MVVM framework asd MVVBindings.
-
-MVVMCross Plugins
-- Color
-- Download Cache
-- File
-
-Xamarin.Plugin.Settings Plugin https://github.com/jamesmontemagno/SettingsPlugin \
-For Cross Platform setting of preferences
-
-MBProgress HUD (https://components.xamarin.com/view/mbprogresshud) \
-For iOS progress indicator
+- MvvMCross https://github.com/MvvmCross/MvvmCross
+- Xamarin Essentials
+- FFImageLoading
+- MBProgress HUD (https://components.xamarin.com/view/mbprogresshud) For iOS progress indicator
 
 NUnit
 For unit tests
