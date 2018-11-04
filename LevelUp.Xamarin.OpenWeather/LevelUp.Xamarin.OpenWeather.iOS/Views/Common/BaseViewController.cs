@@ -1,24 +1,44 @@
 ﻿using System;
-using MvvmCross.iOS.Views;
+using Cirrious.FluentLayouts.Touch;
+using MvvmCross;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
+using UIKit;
+using MvvmCross.Plugin.Messenger;
+using LevelUp.Xamarin.OpenWeather.iOS.Models.Messages;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS.Views.Common
 {
-	public class BaseViewController: MvxViewController
+    public class BaseViewController<T>: MvxViewController<T> where T: MvxViewModel
 	{
-		public BaseViewController(string nibName, Foundation.NSBundle bundle) : base(nibName, bundle)
-		{
-			IsNavigationBarVisible = true;
-			EdgesForExtendedLayout = UIKit.UIRectEdge.None;
-		}
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
 
-		public override void ViewWillAppear(bool animated)
-		{
-            InitializeView();
+            SetupViews();
+            SetupConstraints();
+            SetupNavigationBar();
+            SetupBindings();
+        }
 
-			base.ViewWillAppear(animated);
-		}
+        protected virtual void SetupViews() 
+        {
+            View.BackgroundColor = UIColor.White;
+        }
 
-		public virtual void InitializeView()
+        protected virtual void SetupConstraints() 
+        {
+            View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
+
+            View.AddConstraints(LayoutContraints);
+        }
+
+        protected virtual void SetupBindings() 
+        {
+        }
+
+        public virtual void SetupNavigationBar()
 		{
 			if (NavigationController == null)
 			{
@@ -26,9 +46,18 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Views.Common
 			}
 
 
-			NavigationController.NavigationBarHidden = !IsNavigationBarVisible;
+			NavigationController.NavigationBarHidden = NavigationBarHidden;
 		}
 
-		public bool IsNavigationBarVisible { get; set; }
-	}
+		public bool NavigationBarHidden { get; set; }
+        public virtual FluentLayout[] LayoutContraints { get;  }
+
+        public override void ViewDidAppear(bool animated)
+        {
+            base.ViewDidAppear(animated);
+
+            var messenger = Mvx.IoCProvider.Resolve<IMvxMessenger>();
+            messenger.Publish(new CurrentViewMessage(this, this));
+        }
+    }
 }

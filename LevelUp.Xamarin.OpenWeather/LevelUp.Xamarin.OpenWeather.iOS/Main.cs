@@ -1,12 +1,12 @@
 ﻿using UIKit;
 
-namespace LevelUp.Xamarin.OpenWeather.iOS
+namespace LevelUp.Xamarin.OpenWeather.iOS.App
 {
-	public class Application
-	{
-		static void Main(string[] args)
-		{
-			UIApplication.Main(args, null, "AppDelegate");
-		}
-	}
+    public class Application
+    {
+        static void Main(string[] args)
+        {
+            UIApplication.Main(args, null, "AppDelegate");
+        }
+    }
 }

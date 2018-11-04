@@ -1,13 +1,13 @@
 ﻿using System;
-using MvvmCross;
-using MvvmCross.Platforms.Ios.Core;
+using LevelUp.Xamarin.OpenWeather.Droid.Platform.Services;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
-using LevelUp.Xamarin.OpenWeather.iOS.Platform.Services;
+using MvvmCross;
 using MvvmCross.IoC;
+using MvvmCross.Platforms.Android.Core;
 
-namespace LevelUp.Xamarin.OpenWeather.iOS.App
+namespace LevelUp.Xamarin.OpenWeather.Droid.App
 {
-    public class Setup: MvxIosSetup<CoreApp>
+    public class Setup :MvxAndroidSetup<CoreApp>
     {
         protected override void InitializeIoC()
         {

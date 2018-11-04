@@ -1,8 +1,7 @@
-﻿using System;
-using LevelUp.Xamarin.OpenWeather.iOS.Models.Messages;
+﻿using LevelUp.Xamarin.OpenWeather.iOS.Models.Messages;
 using LevelUp.Xamarin.OpenWeather.Platform.Services.Contracts;
 using MBProgressHUD;
-using MvvmCross.Plugins.Messenger;
+using MvvmCross.Plugin.Messenger;
 using UIKit;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS.Platform.Services
@@ -26,7 +25,7 @@ namespace LevelUp.Xamarin.OpenWeather.iOS.Platform.Services
 				_hud = new MTMBProgressHUD(_currentView)
 				{
 					RemoveFromSuperViewOnHide = true,
-									DimBackground = true
+				    DimBackground = true
 				};
 			}
 
