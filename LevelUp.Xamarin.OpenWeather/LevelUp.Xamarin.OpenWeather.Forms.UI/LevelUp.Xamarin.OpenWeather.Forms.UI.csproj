@@ -12,8 +12,15 @@
   <ItemGroup>
     <Compile Remove="App.xaml.cs" />
     <Compile Remove="Class1.cs" />
+    <Compile Remove="Views\MainView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Remove="App.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LevelUp.Xamarin.OpenWeather.Core\LevelUp.Xamarin.OpenWeather.Core.csproj" />
   </ItemGroup>
 </Project>

@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather.Forms.UI", "LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.Forms.UI\LevelUp.Xamarin.OpenWeather.Forms.UI.csproj", "{8AB9181E-8841-49DD-BED4-0C471F3E3A02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather.Forms.iOS.App", "LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.Forms.iOS\LevelUp.Xamarin.OpenWeather.Forms.iOS.App.csproj", "{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,18 @@ Global
 		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhone.Build.0 = Release|Any CPU
 		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Release|Any CPU.Build.0 = Release|iPhone
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Release|iPhone.Build.0 = Release|iPhone
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,5 +116,6 @@ Global
 		{22B613EF-7E89-4340-8EBC-B182D332E1D6} = {3A7BCCFB-9BE7-4699-9956-586ED81DD51C}
 		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E} = {088BE4A1-86C3-45A7-9E1B-DEBB5B8D2C37}
 		{8AB9181E-8841-49DD-BED4-0C471F3E3A02} = {088BE4A1-86C3-45A7-9E1B-DEBB5B8D2C37}
+		{A9AF56BE-90EB-4A1F-AEA2-06862EB3D84E} = {088BE4A1-86C3-45A7-9E1B-DEBB5B8D2C37}
 	EndGlobalSection
 EndGlobal
