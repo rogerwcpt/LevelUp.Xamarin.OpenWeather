@@ -1,13 +1,13 @@
-﻿using MvvmCross.Plugins.Messenger;
+﻿using MvvmCross.Plugin.Messenger;
 using UIKit;
 
 namespace LevelUp.Xamarin.OpenWeather.iOS.Models.Messages
 {
 	public class CurrentViewMessage : MvxMessage
 	{
-        public CurrentViewMessage(object sender, UIView view) : base(sender)
+		public CurrentViewMessage(object sender, UIViewController currentViewController) : base(sender)
 		{
-            CurrentView = view;
+			CurrentView = currentViewController.View;
 		}
 
 		public readonly UIView CurrentView;

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="za.co.weissdigital.xamarin.openweather" android:versionCode="1" android:versionName="0.1.1">
-	<uses-sdk android:minSdkVersion="21" />
-	<application android:label="Xamarin Open Weather" android:theme="@android:style/Theme.Holo.Light" android:icon="@drawable/icon"></application>
-</manifest>
