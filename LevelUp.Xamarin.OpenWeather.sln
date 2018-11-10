@@ -11,6 +11,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather.iOS.App", "LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.iOS\LevelUp.Xamarin.OpenWeather.iOS.App.csproj", "{22B613EF-7E89-4340-8EBC-B182D332E1D6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{74422921-FE21-4702-86A4-9B8EE4EC71C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Traditional", "Traditional", "{3A7BCCFB-9BE7-4699-9956-586ED81DD51C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{088BE4A1-86C3-45A7-9E1B-DEBB5B8D2C37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather.Forms.Droid.App", "LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.Forms.Droid\LevelUp.Xamarin.OpenWeather.Forms.Droid.App.csproj", "{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.Xamarin.OpenWeather.Forms.UI", "LevelUp.Xamarin.OpenWeather\LevelUp.Xamarin.OpenWeather.Forms.UI\LevelUp.Xamarin.OpenWeather.Forms.UI.csproj", "{8AB9181E-8841-49DD-BED4-0C471F3E3A02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,8 +67,40 @@ Global
 		{22B613EF-7E89-4340-8EBC-B182D332E1D6}.Release|iPhone.Build.0 = Release|iPhone
 		{22B613EF-7E89-4340-8EBC-B182D332E1D6}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{22B613EF-7E89-4340-8EBC-B182D332E1D6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Release|iPhone.Build.0 = Release|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhone.Build.0 = Release|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{86428949-AC05-4846-BA45-BBC52D458045} = {74422921-FE21-4702-86A4-9B8EE4EC71C0}
+		{1F5180D0-8845-49DD-BA01-67FDB232D740} = {74422921-FE21-4702-86A4-9B8EE4EC71C0}
+		{8C767736-CAB2-4B67-AE07-153EBA42A9FA} = {3A7BCCFB-9BE7-4699-9956-586ED81DD51C}
+		{22B613EF-7E89-4340-8EBC-B182D332E1D6} = {3A7BCCFB-9BE7-4699-9956-586ED81DD51C}
+		{BDD4A6D9-BF66-4C55-99D9-C92A1BB20C8E} = {088BE4A1-86C3-45A7-9E1B-DEBB5B8D2C37}
+		{8AB9181E-8841-49DD-BED4-0C471F3E3A02} = {088BE4A1-86C3-45A7-9E1B-DEBB5B8D2C37}
 	EndGlobalSection
 EndGlobal
